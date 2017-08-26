@@ -10,12 +10,15 @@ int main()
         string teamName1, teamName2;
         int score1, score2;
 
+        // ask user to enter 1st baseball team and score
         cout << "Enter baseball team #1: ";
         cin >> teamName1;
         cout << "Enter score for team #1: ";
         cin >> score1;
 
         cout << endl;
+        
+        // ask user to enter 1st baseball team and score
         cout << "Enter baseball team #2: ";
         cin >> teamName2;
         cout << "Enter score for team #2: ";
