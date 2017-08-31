@@ -1,3 +1,6 @@
+// Annie Wong
+// This program asks the user for the baseball game score.
+
 #include <iostream>
 using namespace std;
 
@@ -25,7 +28,7 @@ int main()
                         cout << "Winner: Away Team!\n";
                 }else
                 {
-                        cout << "It's an even game!\n";
+                        cout << "It's a tie game!\n";
                 }
 
                 cout << "Would you like to do it again?(enter y for yes and n for no)\n";
