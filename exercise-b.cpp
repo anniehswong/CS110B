@@ -8,7 +8,6 @@ int main()
 {
         // declare variables
         int numAssignments, grade, total=0;
-        double average;
 
         // ask user for number of assignments
         cout << "Enter the number of assignments: ";
@@ -27,13 +26,35 @@ int main()
                 }
                 total +=grade;
         }
+        // Print total score from user input
         cout << "Total Score: " << total;
 
         cout << endl;
 
-        // calculating average grade of total assigments
+        double average;
+
+        // Calculate average grade of total assigments
         average = total / numAssignments;
+
+        // Print average score from user input
         cout << "Average Score: "<< average;
+        cout << endl;
+
+        if (average >= 90)
+        {
+                cout << "Your grade is A";
+        } else if (average >=80)
+        {
+                cout << "Your grade is B";
+        } else if (average >= 70)
+        {
+                cout << "Your grade is C";
+        } else if (average >= 60)
+                cout << "Your grade is D";
+        else{
+                cout << "I'll see you again next semester!";
+        }
+
         cout << endl;
         return 0;
 }
