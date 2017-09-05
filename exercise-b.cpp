@@ -40,6 +40,7 @@ int main()
         cout << "Average Score: "<< average;
         cout << endl;
 
+        // Print letter grade based on average score
         if (average >= 90)
         {
                 cout << "Your grade is A";
