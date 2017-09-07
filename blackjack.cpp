@@ -23,12 +23,14 @@ int main(){
                 cout << "Total: " << total << endl;
                 cout << "Do you want another card? (y/n): ";
                 cin >> anotherCard;
+
                 while (anotherCard == 'y')
                 {
                         anotherRandomCard = 1+(rand()%10);
                         cout << "Card: " << anotherRandomCard << endl;
                         total += anotherRandomCard;
                         cout << "Total: " << total << endl;
+                        
                         if(total > 21)
                         {
                                 cout << "Bust!" << endl;
