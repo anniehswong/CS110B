@@ -1,3 +1,4 @@
+[awong10@hills ~]$ cat blackjack.cpp
 // Annie Wong
 // CS110B Assignment 2: Blackjack
 
@@ -82,3 +83,30 @@ int main(){
         } while (playAgain == 'y');
         return 0;
 }
+
+
+/* SAMPLE OUT
+[awong10@hills ~]$ g++ blackjack.cpp
+[awong10@hills ~]$ ./a.out
+First cards: 7, 5
+Total: 12
+Do you want another card? (y/n): y
+Card: 2
+Total: 14
+Do you want another card? (y/n): n
+Would you like to play again? (y/n): y
+First cards: 8, 6
+Total: 14
+Do you want another card? (y/n): y
+Card: 5
+Total: 19
+Do you want another card? (y/n): y
+Card: 1
+Total: 20
+Do you want another card? (y/n): y
+Card: 5
+Total: 25
+Bust!
+Would you like to play again (y/n): n
+[awong10@hills ~]$
+*/
