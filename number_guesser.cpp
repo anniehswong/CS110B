@@ -9,9 +9,11 @@ int getMidpoint(int, int);
 bool shouldPlayAgain();
 
 /***** main function *****/
-int main() {
+int main()
+{
 
-        do {
+        do
+        {
           playOneGame();
         } while (shouldPlayAgain());
 
@@ -26,18 +28,29 @@ void playOneGame()
 {
         int low = 1;
         int high = 100;
+        char response;
 
         cout << "Think of a number between 1 and 100." << endl;
-        char response = getUserResponseToGuess(int guess);
-        while (response != 'c'){
-                if (response == 'l'){
-                 response = response - 1;
-                 getMidpoint(int low, int high)
-
-                } else if (input == 'h'){
-
+        response = getUserResponseToGuess(getMidpoint(low, high));
+        while (response != 'c')
+        {
+                if (response == 'l')
+                {
+                        // calculate midpoint
+                        high = getMidpoint(low, high);
                 }
+                else if (response == 'h')
+                {
+                        // calculate midpoint
+                        low  = getMidpoint(low, high);
+                        if (high - 1 == low) {
+                                low = high;
+                        }
+                }
+                response = getUserResponseToGuess(getMidpoint(low, high));
+
         }
+
 }
 
 // This function prompts the user with the phrase “is it <guess>? (h/l/c): “ with the value replacing the token <guess> and returns a char. The char should be one of three possible values: ‘h’, ‘l’, or ‘c’.
@@ -47,6 +60,7 @@ char getUserResponseToGuess(int guess)
         char input;
         cout << "Is it " << guess << "? (h/l/c): ";
         cin >> input;
+        return input;
 }
 
 // This function accepts two integers, and returns the midpoint of the two integers.
@@ -63,13 +77,13 @@ bool shouldPlayAgain()
 {
         char again;
         bool status;
-        cout << "Would you like to play again" << endl;
+        cout << "Great! Would you like to play again? (y/n): ";
         cin >> again;
-        if (again == 'y' || 'Y') {
-                bool status = true;
+        if (again == 'y') {
+                status = true;
 
         } else {
-                bool staus = false;
+                status = false;
         }
         return status;
 
