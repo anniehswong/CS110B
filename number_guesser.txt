@@ -1,3 +1,4 @@
+[awong10@hills ~]$ cat number_guesser.cpp
 // Assignment 3: Annie Wong
 
 #include <iostream>
@@ -12,6 +13,7 @@ bool shouldPlayAgain();
 /***** main function *****/
 int main()
 {
+
         do
         {
           playOneGame();
@@ -88,3 +90,20 @@ bool shouldPlayAgain()
         return status;
 
 }
+
+/* SAMPLE OUTPUT
+[awong10@hills ~]$ g++ number_guesser.cpp
+[awong10@hills ~]$ ./a.out
+Think of a number between 1 and 100.
+Is it 50? (h/l/c): h
+Is it 75? (h/l/c): h
+Is it 87? (h/l/c): l
+Is it 81? (h/l/c): c
+Great! Would you like to play again? (y/n): y
+Think of a number between 1 and 100.
+Is it 50? (h/l/c): l
+Is it 25? (h/l/c): h
+Is it 37? (h/l/c): c
+Great! Would you like to play again? (y/n): n
+[awong10@hills ~]$
+*/
